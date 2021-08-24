@@ -20,11 +20,11 @@ public class Employee {
     @Column(name = "email_id")
     private String emailId;
 
-
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "department_id", nullable = true)
     private Department department;
-    @OneToOne
+
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "account_id", nullable = true)
     private Account account;
 

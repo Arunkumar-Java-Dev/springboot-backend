@@ -53,6 +53,6 @@ public class EmployeeService {
     }
 
     public List<Employee> getEmployeesByFirstName(String firstName) {
-        return employeeRepository.findAllByFirstName(firstName);
+        return employeeRepository.findByLastName(firstName);
     }
 }

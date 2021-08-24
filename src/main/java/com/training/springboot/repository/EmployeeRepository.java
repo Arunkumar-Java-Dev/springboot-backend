@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
-    @Query("SELECT e FROM Employee e WHERE e.firstName =:firstName")
+    @Query(value = "SELECT e FROM Employee e WHERE e.firstName =:firstName")
     List<Employee> findAllByFirstName(String firstName);
 
     List<Employee> findByFirstName(String firstName);
